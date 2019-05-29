@@ -1,0 +1,196 @@
+\documentclass[t]{beamer}
+
+\usetheme{Berkeley}
+
+% MIT colors from https://github.com/jtriley/mit-beamer/blob/master/beamercolorthememit.sty
+\DefineNamedColor{named}{mitred}    {rgb}{0.6,0.2,0.2}
+\DefineNamedColor{named}{mitgray}   {rgb}{0.4,0.4,0.4}
+\DefineNamedColor{named}{darkgray}   {cmyk}{0,0,0,0.90}
+
+\mode<presentation>
+\setbeamercolor{alerted text}{fg=green!80!yellow}
+\setbeamercolor*{palette primary}{bg=mitred,fg=white}
+\setbeamercolor*{palette secondary}{fg=white,bg=mitgray}
+\setbeamercolor*{palette tertiary}{fg=white,bg=darkgray}
+\setbeamercolor*{palette quaternary}{fg=white,bg=yellow}
+\setbeamercolor*{structure}{fg=mitred,bg=white}
+\setbeamercolor{frametitle}{bg=mitred,fg=white}
+\mode<all>
+
+\usepackage[orientation=landscape, size=a0, scale=1.4]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\newcommand{\n}{\par \smallskip}
+\newcommand{\nn}{\n \par \smallskip}  
+\newcommand{\f}{\n \hrule \n}
+\newcommand{\s}[1]{\textbf{#1}}
+\newcommand{\img}[2]{\begin{figure}[htp]\fcolorbox{black}{white}{\includegraphics[width=#2\textwidth]{#1}}\end{figure}}
+\newcommand{\imgnobox}[2]{\begin{figure}[htp]\includegraphics[width=#2\textwidth]{#1}\end{figure}}
+\newcommand{\colwidth}{37.1333}
+
+\newcommand{\TODO}{{\color{red}TODO}}
+\newcommand{\TODOC}[1]{\TODO{\color{red}\{#1\}}}
+
+\begin{document}
+
+\begin{textblock}{104.8}(3, 2.5)
+\begin{block}{\center \Large Poster title}
+\center \text{\large author 1, author 2, author 3} \par \bigskip
+Department of XYZ,  University of ABC, PQR
+\end{block}
+\end{textblock}
+\begin{textblock}{8.09}(109.3,2.5)
+\begin{block}{\vspace*{-3ex}}
+\imgnobox{todo.png}{0.87} % LOGO here.
+\end{block}
+\end{textblock}
+
+{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setbeamercolor{block body}{bg=white}
+%\setbeamercolor{block title}{#3}
+
+
+% left column
+\begin{textblock}{\colwidth}(3,11.5)
+  \begin{frame}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Introduction
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Introduction}
+  \begin{itemize}
+  \item ABC. 
+  \item ABC.
+    \begin{itemize}
+    \item ABC.
+    \item ABC.
+    \end{itemize}
+  \end{itemize}
+  \end{block}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Motivation
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Motivation}
+  \begin{itemize}
+  \item ABC. 
+  \item ABC.
+  \imgnobox{todo.png}{0.9}\n
+  \item \underline{Goal:} ABC.
+  \end{itemize}
+  \end{block}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Background
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+  \begin{block}{Background}
+  ABC.
+  \imgnobox{todo.png}{0.91}
+  ABC.
+  \begin{enumerate}
+  \item ABC.
+  \item ABC.
+  \item ABC.
+  \end{enumerate}
+  \end{block}
+\end{frame}
+\end{textblock}
+
+% middle column
+%\begin{textblock}{\colwidth}(41.6333,11.5)
+\begin{textblock}{\colwidth}(41.6333,10.05)
+  \begin{frame}
+  \begin{block}{\vspace*{-3ex}}
+  \imgnobox{todo.png}{0.9}
+  \end{block}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Methods
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Methods and Results}
+  \begin{itemize}
+  \item {\underline{ABC.:}}
+  ABC:
+  $$\underset{ABC.}{\text{ABC.}} \quad ||x - y||_2^2$$ 
+  ABC.:
+  \imgnobox{todo.png}{0.5} 
+  \item {\underline{ABC:}}
+  ABC.
+  \imgnobox{todo.png}{0.6}
+  \begin{align*}
+  ABC
+  \end{align*}
+  This framework is used to solve:
+    $$ABC$$ 
+  \imgnobox{todo.png}{0.5}
+  \end{itemize}
+  \end{block}
+  \end{frame}
+\end{textblock}
+
+% right column
+% \begin{textblock}{\colwidth}(80.2667,11.5)
+\begin{textblock}{\colwidth}(80.2667,10.05)
+  \begin{frame}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Methods continued
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{\vspace*{-3ex}}
+  \imgnobox{todo.png}{0.85}
+  \begin{itemize}
+  \item{\underline{Results}}
+  $$\begin{tabular}{|c|c|c|} \hline
+   & \text{ABS} & \text{ABS} \\ \hline
+  \text{ABC.} & 100\%& 0\% \\ \hline
+  \text{ABC.} & 50\% & 50\% \\ \hline
+  \end{tabular}$$
+  \end{itemize}
+  \end{block}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Discussion and Conclusion
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Discussion and Conclusion}
+  \begin{itemize}
+  \item ABC.
+  \item ABC.
+  \end{itemize}
+  \end{block} 
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Future Work
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Future Work}
+  \begin{itemize}
+  \item \underline{ABC.:} ABC..
+  \imgnobox{todo.png}{0.8}
+  \end{itemize}
+  \end{block} 
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % References
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+  \begin{block}{References}
+  [1] ABC. \n
+  \end{block} 
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Acknowledgements
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{block}{Acknowledgements}
+  ABC.
+  \end{block}
+  \end{frame}
+\end{textblock}
+}
+  
+\end{document}
+
